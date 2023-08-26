@@ -13,8 +13,13 @@ $querycoupond="select * from coupon where store='$id' && coupontype=1";
 $resultcoupond = mysqli_query($conn, $querycoupond);
 $querycoupona="select * from coupon where store='$id'";
 $resultcoupona = mysqli_query($conn, $querycoupona);
-$querycouponam="select * from coupon where store='$id'";
-$querycouponam = mysqli_query($conn, $querycouponam);}
+
+$querycouponam="select * from coupon where store = '$id' AND top = 'Yes' LIMIT 3";
+$querycouponam = mysqli_query($conn, $querycouponam);
+
+$countquery="select count(*) from coupon where store='$id'";
+$countresult = mysqli_query($conn, $countquery);
+}
 ?>
 
  <!-- Banner Section Start -->
@@ -37,8 +42,7 @@ $querycouponam = mysqli_query($conn, $querycouponam);}
          font-weight: 400;
          }
       </style>
-                                  <?php while($rowstore=mysqli_fetch_array($resultstore))
-                    {
+      <?php while($rowstore=mysqli_fetch_array($resultstore)){
 		?>
 
       <section class="store-sec sec-padding">
@@ -66,6 +70,28 @@ $querycouponam = mysqli_query($conn, $querycouponam);}
                               <input name="offer_type" type="radio" class="slectOne" data-id="offline">
                               <span>Deals</span>
                               </label>
+                           </div>
+                        </div>
+                        <div class="available-offers">
+                           <?php while($count=mysqli_fetch_array($countresult)){?>
+                              <span><?php echo $count[0]; ?> Offers avaliable</span>
+                           <?php
+                           }
+                           ?>
+
+                        </div>
+                        
+                        <div class="available-offers">
+                           <p>Coupon Type</p>
+                           <div class="available-options">
+                           <?php while($count=mysqli_fetch_array($querycouponam)){?>
+                              <label>
+                              <span> <?php echo $count[2]; ?></span>
+                              </label>
+                           <?php
+                           }
+                           ?>
+                              
                            </div>
                         </div>
                        
