@@ -168,12 +168,12 @@ $countresult = mysqli_query($conn, $countquery);
                                 $querystore = "select * from store where id=" . $rowcoupon['store'];
                                 $resultstore = mysqli_query($conn, $querystore);
                                 $rowstore = mysqli_fetch_row($resultstore);
-                                                                 $percentage = $rowcoupond['percent'];
+                                                                 $percentage = $rowcoupon['percent'];
 
                                 $detail = $rowcoupon['details'];
                                 $coupon = $rowcoupon['code'];
                                 $website = $rowcoupon['link'];
-                                 $type = $rowcoupond['coupontype'];
+                                $type = $rowcoupon['coupontype'];
 
                                 ?>
           
