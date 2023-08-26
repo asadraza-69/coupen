@@ -9,10 +9,13 @@ if(isset($_GET['id']))
 
 $querycoupon="select * from coupon where store='$id' && coupontype=4";
 $resultcoupon = mysqli_query($conn, $querycoupon);
+
 $querycoupond="select * from coupon where store='$id' && coupontype=1";
 $resultcoupond = mysqli_query($conn, $querycoupond);
+
 $querycoupona="select * from coupon where store='$id'";
 $resultcoupona = mysqli_query($conn, $querycoupona);
+
 
 $querycouponam="select * from coupon where store = '$id' AND top = 'Yes' LIMIT 3";
 $querycouponam = mysqli_query($conn, $querycouponam);
@@ -82,16 +85,13 @@ $countresult = mysqli_query($conn, $countquery);
                         </div>
                         
                         <div class="available-offers">
-                           <p>Coupon Type</p>
+                           <p>Top Offers</p>
                            <div class="available-options">
                            <?php while($count=mysqli_fetch_array($querycouponam)){?>
                               <label>
                               <span> <?php echo $count[2]; ?></span>
                               </label>
-                           <?php
-                           }
-                           ?>
-                              
+                           <?php } ?>
                            </div>
                         </div>
                        
@@ -132,7 +132,8 @@ $countresult = mysqli_query($conn, $countquery);
                                 $detail = $rowcoupond['details'];
                                 $coupon = $rowcoupond['code'];
                                 $website = $rowcoupond['link'];
-
+                                $type = $rowcoupond['coupontype'];
+                                
                                 ?>
           
                         <div class="coupon-tile">
@@ -140,14 +141,14 @@ $countresult = mysqli_query($conn, $countquery);
                                <p><?php echo $percentage?></p>
                            </div>
                            <div class="coupon-content">
-                              <span>code</span>
+                              <span><?php echo $type == 1 ? "Deal" : "Coupon";?></span>
                               <p><?php echo $detail?></p>
                               <div class="verified">
-                                                                                    <span>Verified <i class="fa fa-check-circle" style="background: #ffffff00;color: #18f351;font-size: 15px;"></i></span>
-                                                                            </div>
+                                    <span>Verified <i class="fa fa-check-circle" style="background: #ffffff00;color: #18f351;font-size: 15px;"></i></span>
+                              </div>
                            </div>
                            <div class="getcodebtn">
-                              <a  onclick='openmodal("<?php echo base64_encode($rowstore[2])?>","<?php echo $detail?>","<?php echo $coupon?>","<?php echo $rowstore[1]?>","<?php echo $website?>")' class="custom-deal-btn">Get Code</a>
+                              <a  onclick='openmodal("<?php echo base64_encode($rowstore[2])?>","<?php echo $detail?>","<?php echo $coupon?>","<?php echo $rowstore[1]?>","<?php echo $website?>")' >Get <?php echo $type == 1 ? "Deal" : "Coupon";?></a>
                               <span>***</span>
                            </div>
                         </div>
@@ -172,6 +173,7 @@ $countresult = mysqli_query($conn, $countquery);
                                 $detail = $rowcoupon['details'];
                                 $coupon = $rowcoupon['code'];
                                 $website = $rowcoupon['link'];
+                                 $type = $rowcoupond['coupontype'];
 
                                 ?>
           
@@ -180,13 +182,13 @@ $countresult = mysqli_query($conn, $countquery);
                               <p><?php echo $percentage?></p>
                            </div>
                            <div class="coupon-content">
-                              <span>code</span>
+                              <span><?php echo $type == 1 ? "Deal" : "Coupon";?></span>
                               <p><?php echo $detail?></p>
                               <div class="verified">
                               </div>
                            </div>
                            <div class="getcodebtn">
-                              <a   onclick='openmodal("<?php echo base64_encode($rowstore[2])?>","<?php echo $detail?>","<?php echo $coupon?>","<?php echo $rowstore[1]?>","<?php echo $website?>")' class="offer_anchor" class="tile-btn">Get Code</a>
+                              <a   onclick='openmodal("<?php echo base64_encode($rowstore[2])?>","<?php echo $detail?>","<?php echo $coupon?>","<?php echo $rowstore[1]?>","<?php echo $website?>")' class="offer_anchor" class="tile-btn">Get <?php echo $type == 1 ? "Deal" : "Coupon";?></a>
                               <span>***</span>
                            </div>
                         </div>
@@ -208,6 +210,7 @@ $countresult = mysqli_query($conn, $countquery);
                                 $detail = $rowcoupond['details'];
                                 $coupon = $rowcoupond['code'];
                                 $website = $rowcoupond['link'];
+                                $type = $rowcoupond['coupontype'];
 
                                 ?>
           
@@ -215,13 +218,13 @@ $countresult = mysqli_query($conn, $countquery);
                            <div class="discount-percentage">
                            </div>
                            <div class="coupon-content">
-                              <span>code</span>
+                              <span><?php echo $type == 1 ? "Deal" : "Coupon";?></span>
                               <p><?php echo $detail?></p>
                               <div class="verified">
                               </div>
                            </div>
                            <div class="getcodebtn">
-                              <a   onclick='openmodal("<?php echo base64_encode($rowstore[2])?>","<?php echo $detail?>","<?php echo $coupon?>","<?php echo $rowstore[1]?>","<?php echo $website?>")' class="offer_anchor" class="tile-btn">Get Code</a>
+                              <a   onclick='openmodal("<?php echo base64_encode($rowstore[2])?>","<?php echo $detail?>","<?php echo $coupon?>","<?php echo $rowstore[1]?>","<?php echo $website?>")' class="offer_anchor" class="tile-btn">Get <?php echo $type == 1 ? "Deal" : "Coupon";?></a>
                               <span>***</span>
                            </div>
                         </div>
@@ -243,8 +246,8 @@ $countresult = mysqli_query($conn, $countquery);
                      More</a></span>
                      <div class="tabbing-content">
                         <div class="tab-content" id="tab-1">
-                                                    <?php while ($rowcoupond = mysqli_fetch_array($resultcouponam)) {
-                                ?>
+                           <?php while ($rowcoupond = mysqli_fetch_array($resultcoupona)) {
+                           ?>
                               <?php
                                 $queryc = "select * from category where id=" . $rowcoupond['category'];
                                 $resultc = mysqli_query($conn, $queryc);
@@ -257,6 +260,7 @@ $countresult = mysqli_query($conn, $countquery);
                                 $detail = $rowcoupond['details'];
                                 $coupon = $rowcoupond['code'];
                                 $website = $rowcoupond['link'];
+                                $type = $rowcoupond['coupontype'];
 
                                 ?>
           
@@ -265,13 +269,13 @@ $countresult = mysqli_query($conn, $countquery);
                               <img class="w-100" src='data:logo/gif;base64,<?php echo base64_encode($rowstore[2]); ?>' alt='Category Image' />
                            </div>
                            <div class="coupon-content">
-                              <span>code</span>
+                              <span><?php echo $type == 1 ? "Deal" : "Coupon";?></span>
                               <p><?php echo $detail?></p>
                               <div class="verified">
                               </div>
                            </div>
                            <div class="getcodebtn">
-                              <a   onclick='openmodal("<?php echo base64_encode($rowstore[2])?>","<?php echo $detail?>","<?php echo $coupon?>","<?php echo $rowstore[1]?>","<?php echo $website?>")' class="offer_anchor" class="tile-btn">Get Code</a>
+                              <a   onclick='openmodal("<?php echo base64_encode($rowstore[2])?>","<?php echo $detail?>","<?php echo $coupon?>","<?php echo $rowstore[1]?>","<?php echo $website?>")' class="offer_anchor" class="tile-btn">Get <?php echo $type == 1 ? "Deal" : "Coupon";?></a>
                               <span>***</span>
                            </div>
                         </div>
@@ -293,6 +297,7 @@ $countresult = mysqli_query($conn, $countquery);
                                 $detail = $rowcoupon['details'];
                                 $coupon = $rowcoupon['code'];
                                 $website = $rowcoupon['link'];
+                                $type = $rowcoupond['coupontype'];
 
                                 ?>
           
@@ -301,13 +306,13 @@ $countresult = mysqli_query($conn, $countquery);
                               <img class="w-100" src='data:logo/gif;base64,<?php echo base64_encode($rowstore[2]); ?>' alt='Category Image' />
                            </div>
                            <div class="coupon-content">
-                              <span>code</span>
+                              <span><?php echo $type == 1 ? "Deal" : "Coupon";?></span>
                               <p><?php echo $detail?></p>
                               <div class="verified">
                               </div>
                            </div>
                            <div class="getcodebtn">
-                              <a   onclick='openmodal("<?php echo base64_encode($rowstore[2])?>","<?php echo $detail?>","<?php echo $coupon?>","<?php echo $rowstore[1]?>","<?php echo $website?>")' class="offer_anchor" class="tile-btn">Get Code</a>
+                              <a   onclick='openmodal("<?php echo base64_encode($rowstore[2])?>","<?php echo $detail?>","<?php echo $coupon?>","<?php echo $rowstore[1]?>","<?php echo $website?>")' class="offer_anchor" class="tile-btn">Get <?php echo $type == 1 ? "Deal" : "Coupon";?></a>
                               <span>***</span>
                            </div>
                         </div>
@@ -329,6 +334,7 @@ $countresult = mysqli_query($conn, $countquery);
                                 $detail = $rowcoupon['details'];
                                 $coupon = $rowcoupon['code'];
                                 $website = $rowcoupon['link'];
+                                $type = $rowcoupond['coupontype'];
 
                                 ?>
           
@@ -337,13 +343,13 @@ $countresult = mysqli_query($conn, $countquery);
                               <img class="w-100" src='data:logo/gif;base64,<?php echo base64_encode($rowstore[2]); ?>' alt='Category Image' />
                            </div>
                            <div class="coupon-content">
-                              <span>code</span>
+                              <span><?php echo $type == 1 ? "Deal" : "Coupon";?></span>
                               <p><?php echo $detail?></p>
                               <div class="verified">
                               </div>
                            </div>
                            <div class="getcodebtn">
-                              <a   onclick='openmodal("<?php echo base64_encode($rowstore[2])?>","<?php echo $detail?>","<?php echo $coupon?>","<?php echo $rowstore[1]?>","<?php echo $website?>")' class="offer_anchor" class="tile-btn" style="background: #0074D9;">Get Deal</a>
+                              <a   onclick='openmodal("<?php echo base64_encode($rowstore[2])?>","<?php echo $detail?>","<?php echo $coupon?>","<?php echo $rowstore[1]?>","<?php echo $website?>")' class="offer_anchor" class="tile-btn" style="background: #0074D9;">Get <?php echo $type == 1 ? "Deal" : "Coupon";?></a>
                               <span>***</span>
                            </div>
                         </div>
