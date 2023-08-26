@@ -5,7 +5,7 @@ if(isset($_SESSION['admin_id']))
 {
     include "header.php";
 
-$query="select * from coupon";
+$query="select * from coupon order by store";
 $result=mysqli_query($conn,$query);
 
 ?>
@@ -45,16 +45,15 @@ $result=mysqli_query($conn,$query);
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Percantage</th>
+                                                <th>Coupon Type</th>
                                                 <th>Details</th>
                                                 <th>Code</th>
                                                 <th>Link</th>
-                                                <th>Category</th>
-                                                <th>Coupon Type</th>
                                                 <th>Store</th>
                                                 <th>Top</th>
                                                 <th>Special Offers</th>
                                                 <th>Special Offers Banner Image</th>
+                                                <th>Percantage</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -63,18 +62,13 @@ $result=mysqli_query($conn,$query);
                                         echo "<tbody>";
                                         echo "<tr>";
                                         echo"<td>".$row['id']."</td>";
-                                        echo"<td>".$row['percent']."</td>";
-                                        echo"<td>".$row['details']."</td>";
-                                        echo"<td>".$row['code']."</td>";
-                                        echo"<td>".$row['link']."</td>";
-                                        $queryc="select * from category where id=".$row['category'];
-                                        $resultc=mysqli_query($conn,$queryc);
-                                        $rowc=mysqli_fetch_row($resultc);
-                                        echo"<td>".$rowc[1]."</td>";
                                         $queryct="select * from coupontype where id=".$row['coupontype'];
                                         $resultct=mysqli_query($conn,$queryct);
                                         $rowct=mysqli_fetch_row($resultct);
                                         echo"<td>".$rowct[1]."</td>";
+                                        echo"<td>".$row['details']."</td>";
+                                        echo"<td>".$row['code']."</td>";
+                                        echo"<td>".$row['link']."</td>";
                                         $querys="select * from store where id=".$row['store'];
                                         $results=mysqli_query($conn,$querys);
                                         $rows=mysqli_fetch_row($results);
@@ -84,6 +78,7 @@ $result=mysqli_query($conn,$query);
 ?>
                                         <td><img class="rounded-circle" width="50" src='data:image/gif;base64,<?php echo base64_encode($row[10]);?>' alt="Special Offer Banner Image"></td>
 <?php
+                                        echo"<td>".$row['percent']."</td>";
                                                     echo "<td><div class='d-flex'>";
                                                         echo "<a class='btn btn-primary shadow btn-xs sharp me-1' href='editcoupon.php?id=".$row['id']."'><i class='fas fa-pencil-alt'></i></a>";
                                                         echo "<a class='btn btn-danger shadow btn-xs sharp' href='deletecoupon.php?id=".$row['id']."'><i class='fa fa-trash'></i></a>";

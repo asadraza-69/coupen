@@ -16,11 +16,12 @@ $resultc=mysqli_query($conn,$queryc);
 if(isset($_POST['btnSubmit']))
 {
     $name=$_POST['name'];
+    $slug=$_POST['slug'];
     $cate=$_POST['cate'];
     $top=$_POST['top'];
     $imag=$_FILES['imge']['tmp_name']; //database
     $imageName=addslashes(file_get_contents($imag));
-    $query1="insert into store(name, cate, top, image)values('$name', '$cate', '$top', '$imageName')";
+    $query1="insert into store(name, slug, cate, top, image)values('$name', '$slug', '$cate', '$top', '$imageName')";
     $result1=mysqli_query($conn,$query1);
     if($result1)
     {
@@ -60,6 +61,9 @@ include "header.php";
                         <input type="text" class="form-control input-default " placeholder="Store Name" name="name" required>
                     </div>
                     <div class="mb-3">
+                        <input type="text" class="form-control input-default " placeholder="Slug" name="slug" required>
+                    </div>
+                    <div class="mb-3">
 								  <label for="formFile" class="form-label">Select Category</label>
                     <select name="cate" class="form-control input-default ">
         <?php
@@ -76,7 +80,7 @@ include "header.php";
                     </div>
                     <div class="mb-3">
                     <div class="mb-3">
-                <input class="form-check-input" type="radio" name="top" value="Yes">
+                <input class="form-check-input" type="checkbox" name="top" value="Yes">
                                                         <label class="form-check-label">
                                                             Top Store
                                                         </label>

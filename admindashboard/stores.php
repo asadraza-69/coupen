@@ -37,6 +37,11 @@ $result=mysqli_query($conn,$query);
                                     </button>
                                     </a>
                                 </h4>
+                                <div class="input-group search-area" style="width: 600px;">
+                                    <input type="text" class="form-control" id="searchInput" placeholder="Search here...">
+                                    <span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
+                                </div>
+
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -44,10 +49,12 @@ $result=mysqli_query($conn,$query);
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Store Name</th>
-                                                <th>Categories</th>
-                                                <th>Tops</th>
                                                 <th>Store Image</th>
+                                                <th>Store Name</th>
+                                                <th>Slug</th>
+                                                <th>No of Coupons</th>
+                                                <th>No of Deals</th>
+                                                <th>Tops</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -56,14 +63,21 @@ $result=mysqli_query($conn,$query);
                                         echo "<tbody>";
                                         echo "<tr>";
                                         echo"<td>".$row['id']."</td>";
+                                        ?>
+                                        <td><img class="rounded-circle" width="50" src='data:image/gif;base64,<?php echo base64_encode($row[2]);?>' alt="Category Image"></td>
+                                        <?php
                                         echo"<td>".$row['name']."</td>";
-                                        $queryc="select * from category where id=".$row['cate'];
+                                        echo"<td>".$row['slug']."</td>";
+                                        $queryc="select count(*) from coupon where coupontype=1";
                                         $resultc=mysqli_query($conn,$queryc);
                                         $rowc=mysqli_fetch_row($resultc);
-                                        echo"<td>".$rowc[1]."</td>";
+                                        echo "<td>" . $rowc[0] . "</td>";
+                                        $queryc="select count(*) from coupon where coupontype=4";
+                                        $resultc=mysqli_query($conn,$queryc);
+                                        $deal=mysqli_fetch_row($resultc);
+                                        echo "<td>" . $deal[0] . "</td>";
                                         echo"<td>".$row['top']."</td>";
                                     ?>
-                                        <td><img class="rounded-circle" width="50" src='data:image/gif;base64,<?php echo base64_encode($row[2]);?>' alt="Category Image"></td>
 <?php
 													echo "<td><div class='d-flex'>";
                                                         echo "<a class='btn btn-primary shadow btn-xs sharp me-1' href='editstore.php?id=".$row['id']."'><i class='fas fa-pencil-alt'></i></a>";
@@ -95,3 +109,27 @@ include "footer.php";
     <?php
   }
 ?>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const searchInput = document.getElementById("searchInput");
+    const table = document.getElementById("example3");
+    const tableRows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+
+    searchInput.addEventListener("input", function() {
+        const searchText = searchInput.value.toLowerCase();
+
+        for (let i = 0; i < tableRows.length; i++) {
+            const storeNameCell = tableRows[i].getElementsByTagName("td")[2];
+            const storeName = storeNameCell.textContent || storeNameCell.innerText;
+
+            if (storeName.toLowerCase().indexOf(searchText) > -1) {
+                tableRows[i].style.display = "";
+            } else {
+                tableRows[i].style.display = "none";
+            }
+        }
+    });
+});
+</script>

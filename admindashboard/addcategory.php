@@ -57,7 +57,7 @@ include "header.php";
                         <input type="text" class="form-control input-default " placeholder="Category Name" name="name" required>
                     </div>
                     <div class="mb-3">
-                <input class="form-check-input" type="radio" name="top" value="Yes">
+                <input class="form-check-input" type="checkbox" name="top" value="Yes">
                                                         <label class="form-check-label">
                                                             Top Category
                                                         </label>
