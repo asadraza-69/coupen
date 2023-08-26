@@ -31,8 +31,8 @@ if(isset($_GET['id']))
                                 <!-- <img class="w-100" src="uploads/store/sakara_Logo.png"/> -->
                             </div>
                         <div class="contentbox">
-                        <?php echo "<a href='storedetails.php?id=".$row['id']."'>"."<span>".$row['name']."</span>"."</a>"; ?>
-                        <!-- <a href="storedetails.php"><span>Store Name</span></a> -->
+                        <?php echo "<a href='storedetails?id=".$row['id']."'>"."<span>".$row['name']."</span>"."</a>"; ?>
+                        <!-- <a href="storedetails"><span>Store Name</span></a> -->
                             <!-- <p>15% Off Sitewide</p> -->
                         </div>
                                             </div>
@@ -41,7 +41,7 @@ if(isset($_GET['id']))
                         }
     ?>
                                     <!-- <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/Perfect_Bar.png"/>
@@ -54,7 +54,7 @@ if(isset($_GET['id']))
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/morrisons_discount_code.png"
@@ -68,7 +68,7 @@ if(isset($_GET['id']))
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/allplants_discount_code.png"
@@ -82,7 +82,7 @@ if(isset($_GET['id']))
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/goldbelly_promo_code.png"
@@ -96,7 +96,7 @@ if(isset($_GET['id']))
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/tobleronecouponcode.png"
@@ -110,7 +110,7 @@ if(isset($_GET['id']))
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/alohacouponcode_copy1.png"

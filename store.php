@@ -12,7 +12,7 @@
                             <div class="row">
                             
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/sakara_Logo.png"
@@ -26,7 +26,7 @@
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/Perfect_Bar.png"
@@ -40,7 +40,7 @@
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/morrisons_discount_code.png"
@@ -54,7 +54,7 @@
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/allplants_discount_code.png"
@@ -68,7 +68,7 @@
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/goldbelly_promo_code.png"
@@ -82,7 +82,7 @@
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/tobleronecouponcode.png"
@@ -96,7 +96,7 @@
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/alohacouponcode_copy1.png"

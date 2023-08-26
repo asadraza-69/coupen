@@ -35,8 +35,8 @@ $storeresult = mysqli_query($conn, $querycoupon);
                                 <!-- <img class="w-100" src="uploads/store/sakara_Logo.png"/> -->
                             </div>
                         <div class="contentbox">
-                        <?php echo "<a href='storedetails.php?id=".$row['id']."'>"."<span>".$row['name']."</span>"."</a>"; ?>
-                        <!-- <a href="storedetails.php"><span>Store Name</span></a> -->
+                        <?php echo "<a href='storedetails?id=".$row['id']."'>"."<span>".$row['name']."</span>"."</a>"; ?>
+                        <!-- <a href="storedetails"><span>Store Name</span></a> -->
                             <!-- <p>15% Off Sitewide</p> -->
                         </div>
                                             </div>
@@ -45,7 +45,7 @@ $storeresult = mysqli_query($conn, $querycoupon);
                         }
     ?>
                                     <!-- <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/Perfect_Bar.png"/>
@@ -58,7 +58,7 @@ $storeresult = mysqli_query($conn, $querycoupon);
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/morrisons_discount_code.png"
@@ -72,7 +72,7 @@ $storeresult = mysqli_query($conn, $querycoupon);
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/allplants_discount_code.png"
@@ -86,7 +86,7 @@ $storeresult = mysqli_query($conn, $querycoupon);
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/goldbelly_promo_code.png"
@@ -100,7 +100,7 @@ $storeresult = mysqli_query($conn, $querycoupon);
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/tobleronecouponcode.png"
@@ -114,7 +114,7 @@ $storeresult = mysqli_query($conn, $querycoupon);
                                         </a>
                                     </div>
                                                                     <div class="col-lg-3 col-md-4">
-                                        <a href="storedetails.php">
+                                        <a href="storedetails">
                                             <div class="mainbox">
                                                 <div class="imgbox">
                                                     <img class="w-100" src="uploads/store/alohacouponcode_copy1.png"

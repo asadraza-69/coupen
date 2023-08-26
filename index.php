@@ -244,26 +244,26 @@ $resultstore = mysqli_query($conn, $querystore);
                             ?>
 
                                 <div class="col-lg-3 col-md-4 col-6">
-                                    <?php echo "<a class='gray_link' href='storedetails.php?id=" . $rowstore['id'] . "'>" . "<span>" . $rowstore['name'] . "</span>" . "</a>"; ?>
+                                    <?php echo "<a class='gray_link' href='storedetails?id=" . $rowstore['id'] . "'>" . "<span>" . $rowstore['name'] . "</span>" . "</a>"; ?>
 
                                 </div>
                             <?php
                             }
                             ?>
                             <!--                            <div class="col-lg-3 col-md-4 col-6">
-                                <a class="gray_link" href="storedetails.php">
+                                <a class="gray_link" href="storedetails">
                                     <button class="custom-btn btn-7"><span>Ebay</span></button>
 
                                 </a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-6">
-                                <a class="gray_link" href="storedetails.php">
+                                <a class="gray_link" href="storedetails">
                                     <button class="custom-btn btn-7"><span>Shopify</span></button>
 
                                 </a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-6">
-                                <a class="gray_link" href="storedetails.php">
+                                <a class="gray_link" href="storedetails">
                                     <button class="custom-btn btn-7"><span>Amazon</span></button>
 
                                 </a>
@@ -346,25 +346,25 @@ $resultstore = mysqli_query($conn, $querystore);
                             ?>
 
                                 <div class="col-lg-3 col-md-4 col-6">
-                                    <?php echo "<a class='gray_link' href='categoriestore.php?id=" . $rowtc['id'] . "'>" . "<span>" . $rowtc['name'] . "</span>" . "</a>"; ?>
+                                    <?php echo "<a class='gray_link' href='categoriestore?id=" . $rowtc['id'] . "'>" . "<span>" . $rowtc['name'] . "</span>" . "</a>"; ?>
                                 </div>
                             <?php
                             }
                             ?>
                             <!--                            <div class="col-lg-3 col-md-4 col-6">
-                                <a class="gray_link" href="categoriestore.php">
+                                <a class="gray_link" href="categoriestore">
                                     <button class="custom-btn btn-7"><span>Travel & Tour</span></button>
 
                                 </a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-6">
-                                <a class="gray_link" href="categoriestore.php">
+                                <a class="gray_link" href="categoriestore">
                                     <button class="custom-btn btn-7"><span>Travel & Tour</span></button>
 
                                 </a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-6">
-                                <a class="gray_link" href="categoriestore.php">
+                                <a class="gray_link" href="categoriestore">
                                     <button class="custom-btn btn-7"><span>Travel & Tour</span></button>
 
                                 </a>

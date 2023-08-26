@@ -14,10 +14,10 @@
             <div class="modal-body">
                 <div class="contentbox">
                     <div class="row">
-                        <div class="titlebox col-lg-3 col-md-6 col-12" style="border:2px solid black">
-                            <img src="https://coupon.spaceland.biz/uploads/store/mpixcouponcode.png"
-                                style="width:100%;height:100px" alt="Brand Image" id="imageData">
-                        </div>
+                      <!-- border css put in below style tag border: 2px solid black; -->
+                    <div class="titlebox col-lg-3 col-md-6 col-12" style=" display: flex; justify-content: center; align-items: center;">
+                        <img src="https://coupon.spaceland.biz/uploads/store/mpixcouponcode.png" style="max-width: 100%; max-height: 100px;" alt="Brand Image" id="imageData">
+                    </div>
                         <div class="copy-code col-md-9" id="">
                             <h4 class="main_title" id="detail">20% Off On All Orders</h4>
                             <h4 class="no_code" style="display: none;">No coupon code required.</h4>
@@ -61,7 +61,7 @@
                             </div>
                             <center>
                             <br>
-                            <a class="gray_link" href="categoriestore.php">
+                            <a class="gray_link" href="categoriestore">
                                 <a href='#' class="custom-btn btn-7" id="link" target="_blank"><span>Continue </span></a>
 
                             </a></center>
@@ -653,14 +653,20 @@ if(isset($_POST['btnSubmit']))
 
         // const copyTarget = document.getElementById('copyTarget').value = coupon;
         // document.getElementById('link').setAttribute('href', website);
+        console.log("website",website)
         // window.open(website, "_blank");
         const copyTarget = document.getElementById('copyTarget').value = coupon;
-    
+        console.log("copyTarget",copyTarget)
+
         const linkElement = document.getElementById('link');
-        linkElement.setAttribute('href', website);
+        console.log("linkElement",linkElement)
+        website = website.trim();
+        const fullWebsite = website.startsWith('http://') || website.startsWith('https://') ? website : 'http://'+website;
+        linkElement.setAttribute('href', fullWebsite);
+        console.log("linkElement", linkElement);
         linkElement.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent default link behavior
-            window.open(website, "_blank"); // Navigate within the same tab
+            window.open(fullWebsite, "_blank"); // Navigate within the same tab
         });
 
 
@@ -678,7 +684,7 @@ if(isset($_POST['btnSubmit']))
             const searchQuery = document.getElementById('searchtxt').value;
 
             // Construct the URL with the search query as a parameter
-            const searchUrl = `search.php?query=${encodeURIComponent(searchQuery)}`;
+            const searchUrl = `search?query=${encodeURIComponent(searchQuery)}`;
 
             // Redirect the user to the search.php page
             window.location.href = searchUrl;

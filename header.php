@@ -78,7 +78,7 @@ $resultlogo=mysqli_query($conn,$querylogo);
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-2 col-md-2" style="width:100px;height:100px">
-            <a href="index.php" class="logo" >
+            <a href="index" class="logo" >
                         <?php while($rowlogo=mysqli_fetch_array($resultlogo))
                     {
                         ?>
@@ -110,10 +110,10 @@ $result=mysqli_query($conn,$query);
                         ?>
 
           <li style="width:100px;height:100px">
-            <!-- <a href="categoriestore.php"> -->
+            <!-- <a href="categoriestore"> -->
             <img src='data:logo/gif;base64,<?php echo base64_encode($row[2]);?>'  alt='Category Image'/>
               <!-- <img src="uploads/category/Sportswear.png" alt="Sportswear" /> -->
-              <?php echo	"<a href='categoriestore.php?id=".$row['id']."'>"."<span>". $row[1]."</span>"."</a>";?>
+              <?php echo	"<a href='categoriestore?id=".$row['id']."'>"."<span>". $row[1]."</span>"."</a>";?>
               <!-- <span><?php// echo $row['name'];?></span> -->
             <!-- </a> -->
           </li>
@@ -121,7 +121,7 @@ $result=mysqli_query($conn,$query);
                     }
 ?>
           <!-- <li>
-            <a href="categoriestore.php">
+            <a href="categoriestore">
               <img
                 src="uploads/category/Home-And-Garden.png"
                 alt="Home & Garden"
@@ -130,13 +130,13 @@ $result=mysqli_query($conn,$query);
             </a>
           </li>
           <li>
-            <a href="categoriestore.php">
+            <a href="categoriestore">
               <img src="uploads/category/clothing3.png" alt="Clothing" />
               <span>Clothing</span>
             </a>
           </li>
           <li>
-            <a href="categoriestore.php">
+            <a href="categoriestore">
               <img
                 src="uploads/category/Travel-and-ticket.png"
                 alt="Travel & Tickets"
@@ -154,7 +154,7 @@ $result=mysqli_query($conn,$query);
             </a>
           </li>
           <li>
-            <a href="categoriestore.php">
+            <a href="categoriestore">
               <img
                 src="uploads/category/Computer-Accessories.png"
                 alt="Computer Accessories"
@@ -163,13 +163,13 @@ $result=mysqli_query($conn,$query);
             </a>
           </li>
           <li>
-            <a href="categoriestore.php">
+            <a href="categoriestore">
               <img src="uploads/category/Ecommerce.png" alt="E-commerce" />
               <span>E-commerce</span>
             </a>
           </li>
           <li>
-            <a href="categoriestore.php">
+            <a href="categoriestore">
               <img
                 src="uploads/category/Department-store.png"
                 alt="Department Store"
@@ -178,7 +178,7 @@ $result=mysqli_query($conn,$query);
             </a>
           </li>
           <li>
-            <a href="categoriestore.php">
+            <a href="categoriestore">
               <img
                 src="uploads/category/Home-And-Accomodation.png"
                 alt="Home & Rooms"
@@ -187,14 +187,14 @@ $result=mysqli_query($conn,$query);
             </a>
           </li>
           <li>
-            <a href="categoriestore.php">
+            <a href="categoriestore">
               <img src="uploads/category/Gift.png" alt="Gifts" />
               <span>Gifts</span>
             </a>
           </li> -->
 
           <li style="width:100px;height:100px">
-            <a href="categories.php">
+            <a href="categories">
               <img src="assets/new/images/category/More.png" alt="Holiday" />
               <span>More</span>
             </a>
@@ -211,7 +211,7 @@ $resultlogom=mysqli_query($conn,$querylogom);
       <div class="container">
         <div class="mainbox">
           <div class="logo">
-            <a href="index.php">
+            <a href="index">
                                         <?php while($rowlogom=mysqli_fetch_array($resultlogom))
                     {
                         ?>
@@ -254,7 +254,7 @@ $resultm=mysqli_query($conn,$querym);
     <div class="mobile-nav-main">
       <div class="mobile-nav">
         <i class="fa fa-times close_btn"></i>
-        <a href="categoriestore.php" class="logo">
+        <a href="categoriestore" class="logo">
           <img
             class="w-100"
             src="./assets/logo.png"
@@ -269,13 +269,13 @@ $resultm=mysqli_query($conn,$querym);
 
           <li>
             <img src='data:logo/gif;base64,<?php echo base64_encode($rowm[2]);?>'  alt='Category Image'/>
-              <?php echo	"<a href='categoriestore.php?id=".$rowm['id']."'>"."<span>". $rowm[1]."</span>"."</a>";?>
+              <?php echo	"<a href='categoriestore?id=".$rowm['id']."'>"."<span>". $rowm[1]."</span>"."</a>";?>
           </li>
 <?php
                     }
 ?>
 <!--          <li>
-            <a href="categoriestore.php"
+            <a href="categoriestore"
               ><img
                 src="uploads/category/Home-And-Garden.png"
                 alt="Home & Garden"
@@ -284,13 +284,13 @@ $resultm=mysqli_query($conn,$querym);
             >
           </li>
           <li>
-            <a href="categoriestore.php"
+            <a href="categoriestore"
               ><img src="uploads/category/clothing3.png" alt="Clothing" />
               <span>Clothing</span></a
             >
           </li>
           <li>
-            <a href="categoriestore.php"
+            <a href="categoriestore"
               ><img
                 src="uploads/category/Travel-and-ticket.png"
                 alt="Travel & Tickets"
@@ -299,7 +299,7 @@ $resultm=mysqli_query($conn,$querym);
             >
           </li>
           <li>
-            <a href="categoriestore.php"
+            <a href="categoriestore"
               ><img
                 src="uploads/category/Health-And-Beauty.png"
                 alt="Health & Beauty"
@@ -308,7 +308,7 @@ $resultm=mysqli_query($conn,$querym);
             >
           </li>
           <li>
-            <a href="categoriestore.php"
+            <a href="categoriestore"
               ><img
                 src="uploads/category/Computer-Accessories.png"
                 alt="Computer Accessories"
@@ -317,13 +317,13 @@ $resultm=mysqli_query($conn,$querym);
             >
           </li>
           <li>
-            <a href="categoriestore.php"
+            <a href="categoriestore"
               ><img src="uploads/category/Ecommerce.png" alt="E-commerce" />
               <span>E-commerce</span></a
             >
           </li>
           <li>
-            <a href="categoriestore.php"
+            <a href="categoriestore"
               ><img
                 src="uploads/category/Department-store.png"
                 alt="Department Store"
@@ -332,7 +332,7 @@ $resultm=mysqli_query($conn,$querym);
             >
           </li>
           <li>
-            <a href="categoriestore.php"
+            <a href="categoriestore"
               ><img
                 src="uploads/category/Home-And-Accomodation.png"
                 alt="Home & Rooms"
@@ -341,7 +341,7 @@ $resultm=mysqli_query($conn,$querym);
             >
           </li>
           <li>
-            <a href="categoriestore.php"
+            <a href="categoriestore"
               ><img src="uploads/category/Gift.png" alt="Gifts" />
               <span>Gifts</span></a
             >

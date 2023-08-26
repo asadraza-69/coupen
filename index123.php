@@ -98,7 +98,7 @@ $resultcoupon=mysqli_query($conn,$querycoupon);
     <div class="container">
         <div class="sec-title">
             <h3>Top Coupon</h3>
-            <a href="categories.php">View all</a>
+            <a href="categories">View all</a>
         </div>
         <div class="row">
         <?php while($rowcoupon=mysqli_fetch_array($resultcoupon))
@@ -185,7 +185,7 @@ $resultre=mysqli_query($conn,$queryre);
     <div class="container">
         <div class="sec-title" style="padding-top: 20px">
             <h3>Recent Coupon</h3>
-            <a href="categories.php">View all</a>
+            <a href="categories">View all</a>
         </div>
         <div class="row">
         <?php while($rowre=mysqli_fetch_array($resultre))
@@ -267,7 +267,7 @@ $rowca=mysqli_fetch_row($resultca);
     <div class="container">
         <div class="sec-title">
             <h3>Travel & Tickets</h3>
-            <a href="categories.php">View all</a>
+            <a href="categories">View all</a>
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-4">
@@ -353,26 +353,26 @@ $resultstore=mysqli_query($conn,$querystore);
                         ?>
                             
                             <div class="col-lg-3 col-md-4 col-6">
-                                <?php echo "<a class='gray_link' href='storedetails.php?id=".$rowstore['id']."'>"."<button class='custom-btn btn-7'><span>".$rowstore['name']."</span></button>"."</a>"; ?>
+                                <?php echo "<a class='gray_link' href='storedetails?id=".$rowstore['id']."'>"."<button class='custom-btn btn-7'><span>".$rowstore['name']."</span></button>"."</a>"; ?>
 
                             </div>
 <?php
                     }
 ?>
 <!--                            <div class="col-lg-3 col-md-4 col-6">
-                                <a class="gray_link" href="storedetails.php">
+                                <a class="gray_link" href="storedetails">
                                     <button class="custom-btn btn-7"><span>Ebay</span></button>
 
                                 </a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-6">
-                                <a class="gray_link" href="storedetails.php">
+                                <a class="gray_link" href="storedetails">
                                     <button class="custom-btn btn-7"><span>Shopify</span></button>
 
                                 </a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-6">
-                                <a class="gray_link" href="storedetails.php">
+                                <a class="gray_link" href="storedetails">
                                     <button class="custom-btn btn-7"><span>Amazon</span></button>
 
                                 </a>
@@ -399,25 +399,25 @@ $resulttc=mysqli_query($conn,$querytc);
                         ?>
                             
                             <div class="col-lg-3 col-md-4 col-6">
-                                <?php echo "<a class='gray_link' href='categoriestore.php?id=".$rowtc['id']."'>"."<button class='custom-btn btn-7'><span>".$rowtc['name']."</span></button>"."</a>"; ?>
+                                <?php echo "<a class='gray_link' href='categoriestore?id=".$rowtc['id']."'>"."<button class='custom-btn btn-7'><span>".$rowtc['name']."</span></button>"."</a>"; ?>
                             </div>
 <?php
                     }
 ?>
 <!--                            <div class="col-lg-3 col-md-4 col-6">
-                                <a class="gray_link" href="categoriestore.php">
+                                <a class="gray_link" href="categoriestore">
                                     <button class="custom-btn btn-7"><span>Travel & Tour</span></button>
 
                                 </a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-6">
-                                <a class="gray_link" href="categoriestore.php">
+                                <a class="gray_link" href="categoriestore">
                                     <button class="custom-btn btn-7"><span>Travel & Tour</span></button>
 
                                 </a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-6">
-                                <a class="gray_link" href="categoriestore.php">
+                                <a class="gray_link" href="categoriestore">
                                     <button class="custom-btn btn-7"><span>Travel & Tour</span></button>
 
                                 </a>

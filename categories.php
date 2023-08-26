@@ -30,164 +30,164 @@ $resultcategory=mysqli_query($conn,$querycategory);
                         ?>
 
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-            <?php echo "<a href='categoriestore.php?id=".$rowcategory['id']."'>".$rowcategory['name']."</a>"; ?>
+            <?php echo "<a href='categoriestore?id=".$rowcategory['id']."'>".$rowcategory['name']."</a>"; ?>
 
-              <!-- <a href="categoriestore.php">Art & Crafts</a> -->
+              <!-- <a href="categoriestore">Art & Crafts</a> -->
             </div>
 <?php
                     }
 ?>
             <!-- <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Automotive</a>
+              <a href="categoriestore">Automotive</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Bed & Bath</a>
+              <a href="categoriestore">Bed & Bath</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Books</a>
+              <a href="categoriestore">Books</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php"
+              <a href="categoriestore"
                 >Cellular Phone and Tablets</a
               >
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Clothing</a>
+              <a href="categoriestore">Clothing</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php"
+              <a href="categoriestore"
                 >Computer Accessories</a
               >
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php"
+              <a href="categoriestore"
                 >Computers & Software</a
               >
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php"
+              <a href="categoriestore"
                 >Consumer Electronics</a
               >
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Cosmetics</a>
+              <a href="categoriestore">Cosmetics</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Delivery</a>
+              <a href="categoriestore">Delivery</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Department Store</a>
+              <a href="categoriestore">Department Store</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">E-commerce</a>
+              <a href="categoriestore">E-commerce</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Education</a>
+              <a href="categoriestore">Education</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Entertainment</a>
+              <a href="categoriestore">Entertainment</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Fashion</a>
+              <a href="categoriestore">Fashion</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Food & Beverage</a>
+              <a href="categoriestore">Food & Beverage</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Footwear</a>
+              <a href="categoriestore">Footwear</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Freebies</a>
+              <a href="categoriestore">Freebies</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Furniture & Decor</a>
+              <a href="categoriestore">Furniture & Decor</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Games</a>
+              <a href="categoriestore">Games</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Gifts</a>
+              <a href="categoriestore">Gifts</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Gifts & Flowers</a>
+              <a href="categoriestore">Gifts & Flowers</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Grocery & Food</a>
+              <a href="categoriestore">Grocery & Food</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Health & Beauty</a>
+              <a href="categoriestore">Health & Beauty</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Home & Garden</a>
+              <a href="categoriestore">Home & Garden</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Home & Rooms</a>
+              <a href="categoriestore">Home & Rooms</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Home Accessories</a>
+              <a href="categoriestore">Home Accessories</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Kids & Baby</a>
+              <a href="categoriestore">Kids & Baby</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Kitchen & Dining</a>
+              <a href="categoriestore">Kitchen & Dining</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Laptop</a>
+              <a href="categoriestore">Laptop</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Men</a>
+              <a href="categoriestore">Men</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php"
+              <a href="categoriestore"
                 >Motorcycle Accessories</a
               >
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php"
+              <a href="categoriestore"
                 >Network and Communication</a
               >
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">News</a>
+              <a href="categoriestore">News</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Office & School</a>
+              <a href="categoriestore">Office & School</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Outdoor Equipment</a>
+              <a href="categoriestore">Outdoor Equipment</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Pets</a>
+              <a href="categoriestore">Pets</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Photography</a>
+              <a href="categoriestore">Photography</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Sports & Outdoor</a>
+              <a href="categoriestore">Sports & Outdoor</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
               <a href="category/sportswear.html">Sportswear</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Tax & Finance</a>
+              <a href="categoriestore">Tax & Finance</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php"
+              <a href="categoriestore"
                 >Textile and Interior Design</a
               >
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Travel & Tickets</a>
+              <a href="categoriestore">Travel & Tickets</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">TV</a>
+              <a href="categoriestore">TV</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Web Hosting</a>
+              <a href="categoriestore">Web Hosting</a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-              <a href="categoriestore.php">Women</a>
+              <a href="categoriestore">Women</a>
             </div> -->
 
           </div>
